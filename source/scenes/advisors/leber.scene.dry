@@ -29,7 +29,9 @@ on-arrival: advisor_action_timer = 6; pro_republic += 5; democratization += 1; n
 Leber helps us to rally the people in defense of democracy.
 
 @lib_rally
-title: Rally in cooperation with the Liberals
+title: Rally with the [+ ddp_name +]
+subtitle: Joint rally with our allies.
+view-if: weimar_plan_adopted == 0
 choose-if: advisor_action_timer == 0 
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: advisor_action_timer =6; new_middle_ddp += 5; old_middle_ddp; +=4; worker_spd +=4
