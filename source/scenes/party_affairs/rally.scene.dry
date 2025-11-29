@@ -75,6 +75,7 @@ Mass rallies are a common feature of social democratic life, especially in the l
 - @welfare: Sozialpolitik - the maintenance and expansion of social welfare programs.
 - @democracy: Expanding our nascent democracy and defending it against dictatorship and fascism.
 - @pacifism: Opposing war, nationalism, and militarism at all costs.
+- @lib: Rally with our Liberal allies.
 - @wtb: Support the WTB plan!
 - @weimar_1: A joint rally by the Weimar parties on behalf of our economic plan, tauting it as a republican compromise.
 - @weimar_2: A joint rally by the Weimar parties on behalf of our economic plan, tauting it as a republican compromise.
@@ -90,6 +91,12 @@ Our message of class struggle appeals to the left wing of the working class, whi
 on-arrival: workers_spd += 3*(1-dissent); workers_spd += 3*(1-dissent) if welfare > 0; unemployed_spd += 3*(1-dissent) if welfare > 0; unemployed_spd += 4*(1-dissent) if welfare > 1; reformist_strength += 3; labor_strength += 4; reformist_dissent -= 3; labor_dissent -= 3;
 
 The reformist message appeals to the organized workers, whose benefits are the accomplishments of social democracy. [? if welfare > 1 : Our achievements in expanding welfare have made this message more effective. ?]
+
+@lib
+on-arrival: workers_spd += 3*(1-dissent); old_middle_ddp += 4; new_middle_spd += 4; unemployed_spd += 3*(1-dissent);
+
+We rally with members of the [+ ddp_name +] in our commitment to a more democratic and progressive germany
+
 
 @democracy
 on-arrival: democratization += 1; pro_republic += 2*(1 - dissent); workers_spd += 4*(1-dissent) if democratization >= 3; unemployed_spd += 3*(1-dissent) if democratization >= 3; pro_republic += 4*(1 - dissent) if democratization >= 3; new_middle_spd += 4*(1-dissent) if democratization >= 3 
