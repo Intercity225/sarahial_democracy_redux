@@ -10,6 +10,7 @@ new-page: true
 Leber is a former army officer who turned against the military leaders of the Kapp Putsch in 1920, helping us put down the army's attempted coup. He is in favor of expanded democracy and building a broad popular base for the SPD.
 
 - @democratic_rally
+- @lib_rally
 - @weimar_rally
 - @military_affairs
 - @support_peoples_party
@@ -26,6 +27,12 @@ unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +
 on-arrival: advisor_action_timer = 6; pro_republic += 5; democratization += 1; neorevisionist_strength += 5; reformist_strength += 3; workers_spd += 4*(1-dissent) if democratization >= 4; new_middle_spd += 3*(1-dissent) if democratization >= 4
 
 Leber helps us to rally the people in defense of democracy.
+
+@lib_rally
+title: Rally in cooperation with the Liberals
+choose-if: advisor_action_timer == 0 
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer =6; new_middle_ddp += 5; old_middle_ddp; +=4; worker_spd +=4
 
 @weimar_rally
 title: Rally for democracy and the Weimar Plan with our allies!
